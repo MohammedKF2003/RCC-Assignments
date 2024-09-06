@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="fas fa-house">Vision Estate</title>
+    <link rel="icon" type="image/x-icon" href="./imgs/icons/house-solid.svg">
+    <!-- font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- css file link  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- scss file link -->
+    <link rel="stylesheet" href="./css/house_style.scss">
+</head>
+<body>
+    <!-- ========== Start header section ========== -->
+    
+    <header class="header">
+
+       <nav class="navbar nav-1">
+ 
+        <section class="flex">
+           <a href="./index.html" class="logo"><i class="fas fa-house"></i>Vision</a>
+           <div class="post-btn">
+           <ul>
+            <li> <a href="#">Post Property<i class="fas fa-paper-plane" class="inline-btn"></i></a> </li>
+           </ul>
+           </div>
+        </section>
+
+       </nav>
+
+       <nav class="navbar nav-2">
+        <section class="flex">
+            <div id="menu-btn" class="fas fa-bars"></div>
+
+            <div class="menu">
+                <ul>
+                    <li> <a href="./All_listings.html">buy <i class="fas fa-angle-down"></i> </a> 
+                       <ul>
+                        <li> <a href="#">House</a> </li>
+                        <li> <a href="#">Flat</a> </li>
+                        <li> <a href="#">Shop</a> </li>
+                        <li> <a href="#">Ready To Move</a> </li>
+                        <li> <a href="#">Furnished</a> </li>
+                       </ul>
+                    </li>
+                    <li> <a href="./All_listings.html">Sell<i class="fas fa-angle-down"></i></a> 
+                      <ul>
+                        <li> <a href="#">Post Property</a> </li>
+                        <li> <a href="#">Dashboard</a> </li>
+                      </ul>
+                    </li>
+                    <li> <a href="./All_listings.html">Rent<i class="fas fa-angle-down"></i></a> 
+                      <ul>
+                        <li> <a href="#">House</a> </li>
+                        <li> <a href="#">Flat</a> </li>
+                        <li> <a href="#">Shop</a> </li>
+                      </ul>
+                    </li>
+                    <li> <a href="#">Help <i class="fas fa-angle-down"></i></a>
+                      <ul>
+                        <li> <a href="./About.html">about us</a> </li>
+                        <li> <a href="./Contact_Us.html">contact us</a> </li>
+                        <li> <a href="./Contact_Us.html#FAQ">FAQ</a> </li>
+                      </ul>  
+                    </li>
+                </ul>
+            </div>
+
+            <ul>
+                <li> <a href="#">saved<i class="far fa-heart"></i></a> </li>
+                <li> <a href="#">Account<i class="fas fa-angle-down"></i></a> 
+                  <ul>
+                    <li><a href="./Login.html">Login</a></li>
+                    <li><a href="./Register.html">Register</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </section>
+       </nav>
+
+    </header>
+
+    <!-- ========== End header section ========== -->
+
+    <!-- ========== Start Home section ========== -->
+    
+   <div class="home">
+    <section class="center">
+      <form action="search" method="post">
+        <h3>Find Your Perfect Home</h3>
+        <div class="box">
+            <p>Enter Location<span>*</span></p>
+            <input type="text" name="location" maxlength="50" 
+            placeholder="Enter City Name" class="input" required>
+        </div>
+        <div class="flex">
+            <div class="box">
+                <p>Property Type<span>*</span></p>
+                <select name="type" class="input" required>
+                    <option value="flat">Flat</option>
+                    <option value="house">House</option>
+                    <option value="shop">Shop</option>
+                </select>
+            </div>
+           <div class="house" id="house" data-rooms="6">
+            <div class="fas fa-house-wings" data-flip-key="wings">
+                <div class="fas fa-house-left-wing">
+                    <div class="fas fa-house-window"></div>
+                    <div class="fas fa-house-window"></div>
+                    <div class="fas fa-house-sparkle">
+                        <div class="fas fa-house-sparkle-dots"></div>
+                    </div>
+                </div>
+                <div class="house-right-wing">
+                    <div class="house-window"></div>
+                    <div class="house-window"></div>
+                    <div class="house-sparkle">
+                        <div class="house-sparkle-dots"></div>
+                    </div>
+                </div>
+                <div class="house-roof">
+                    <div class="house-ledge"></div>
+                </div>
+            </div>
+            <div class="house-front" data-flip-key="front">
+                <div class="house-chimney"></div>
+                <div class="house-facade"></div>
+                <div class="house-window">
+                    <div class="house-sparkle">
+                        <div class="house-sparkle-dots"></div>
+                    </div>
+                </div>
+                <div class="house-doorway">
+                    <div class="house-stairs"></div>
+                    <div class="house-door"></div>
+                </div>
+                <div class="house-gable">
+                    <div class="house-roof">
+                        <div class="house-ledge"></div>
+                    </div>
+                </div>
+            </div>
+           </div>
+           <label class="house-label" for="rang" id="label">Rooms</label>
+           <input type="range" min="2" max="6" step="1" value="6" id="range">
+
+
+            <div class="box">
+                <p>MIN Budget<span>*</span></p>
+                <select name="minimum" class="input" required>
+                    <option value="500000">500K-5M EGP</option>
+                    <option value="1000000">6M-10M EGP</option>
+                    <option value="2000000">11M-15M EGP</option>
+                    <option value="3000000">16M-20M EGP</option>
+                    <option value="4000000">21M-25M EGP</option>
+                    <option value="5000000">26M-30M EGP</option>
+                    <option value="6000000">31M-35M EGP</option>
+                    <option value="7000000">36M-40M EGP</option>
+                 </select>
+            </div>
+            <div class="box">
+                <p>MAX Budget<span>*</span></p>
+                <select name="maximum" class="input" required>
+                    <option value="500000">500K-5M EGP</option>
+                    <option value="1000000">6M-10M EGP</option>
+                    <option value="2000000">11M-15M EGP</option>
+                    <option value="3000000">16M-20M EGP</option>
+                    <option value="4000000">21M-25M EGP</option>
+                    <option value="5000000">26M-30M EGP</option>
+                    <option value="6000000">31M-35M EGP</option>
+                    <option value="7000000">36M-40M EGP</option>
+                 </select>
+            </div>
+        </div>
+        <input type="submit" value="search property" name="search" class="btn">
+      </form>  
+    </section>
+   </div>   
+
+    <!-- ========== End Home section ========== -->
+
+
+    <!-- ========== Start services section ========== -->
+
+    <section class="services">
+        <h1 class="heading">Our Services</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="./imgs/icons/icon-1.png" alt="">
+                <h3>Buy House</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur 
+                    adipisicing elit. Quasi, earum.</p>
+            </div>
+
+            <div class="box">
+                <img src="./imgs/icons/icon-2.png" alt="">
+                <h3>Rent House</h3>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Sint, rerum?</p>
+            </div>
+            <div class="box">
+                <img src="./imgs/icons/icon-3.png" alt="">
+                <h3>Sell House</h3>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Sint, rerum?</p>
+            </div>
+
+            <div class="box">
+                <img src="./imgs/icons/icon-4.png" alt="">
+                <h3>Flats And Buildings</h3>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Sint, rerum?</p>
+            </div>
+
+            <div class="box">
+                <img src="./imgs/icons/icon-5.png" alt="">
+                <h3>Shops And Malls</h3>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Sint, rerum?</p>
+            </div>
+
+            <div class="box">
+                <img src="./imgs/icons/icon-6.png" alt="">
+                <h3>24/7 Service</h3>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Sint, rerum?</p>
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!-- ========== End services section ========== -->
+
+
+    <!-- ========== Start listing section ========== -->
+    
+    <section class="listings">
+        <h1 class="heading">Latest Listings</h1>
+        <div class="box-container">
+
+            <div class="box">
+                <div class="admin">
+                    <h3>M</h3>
+                    <div>
+                        <p>Mohammed Khaled</p>
+                        <span>6-8-2023</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <p class="total-images"><i class="far fa-image"><span>4</span></i></p>
+                    <p class="type"><span>House</span><span>Sale</span></p>
+                    <form action="" method="post" class="save">
+                        <button type="submit" name="save" class="far fa-heart"></button>
+                    </form>
+                    <img src="./imgs/exterior/Screenshot 2023-08-06 032118.png" alt="Home 1">
+                </div>
+                <h3 class="name">Modern Homes And Mansions</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i><span>Beverly Hills, California, USA</span></p>
+                <div class="flex">
+                    <p><i class="fas fa-bed"></i><span>5</span></p>
+                    <p><i class="fas fa-bath"></i><span>6 | 1</span></p>
+                    <p><i class="fas fa-maximize"></i><span>1470sqft</span></p>
+                </div>
+                <a href="./View_property.html" class="btn">View Property</a>
+            </div>
+
+            <div class="box">
+                <div class="admin">
+                    <h3>M</h3>
+                    <div>
+                        <p>Mohammed Khaled</p>
+                        <span>6-8-2023</span>
+                    </div>
+                </div>
+                <div class="thumb">
+                    <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
+                    <p class="type"><span>Flat</span><span>Sale</span></p>
+                    <form action="" method="post" class="save">
+                        <button type="submit" name="save" class="far fa-heart"></button>
+                    </form>
+                    <img src="./imgs/flats/Screenshot 2023-08-06 035753.png" alt="Flat 1">
+                </div>
+                <h3 class="name">Modern Flats And Appartments</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i><span>Miami, Florida, USA</span></p>
+                <div class="flex">
+                    <p><i class="fas fa-bed"></i><span>2</span></p>
+                    <p><i class="fas fa-bath"></i><span>2</span></p>
+                    <p><i class="fas fa-maximize"></i><span>350sqft</span></p>
+                </div>
+                <a href="./View_property_2.html" class="btn">View Property</a>
+            </div>
+            <div class="box">
+                <div class="admin">
+                    <h3>M</h3>
+                    <div>
+                        <p>Mohammed Khaled</p>
+                        <span>6-8-2023</span>
+                    </div>
+                </div>
+                    <div class="thumb">
+                        <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
+                        <p class="type"><span>Flat</span><span>Sale</span></p>
+                        <form action="" method="post" class="save">
+                            <button type="submit" name="save" class="far fa-heart"></button>
+                        </form>
+                        <img src="./imgs/flats/Screenshot 2023-08-06 083056.png" alt="building">
+                    </div>
+                    <h3 class="name">Appartment Building</h3>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i><span>Manhatten, new york, USA</span></p>
+                    <div class="flex">
+                        <p><i class="fas fa-bed"></i><span>3</span></p>
+                        <p><i class="fas fa-bath"></i><span>2</span></p>
+                        <p><i class="fas fa-maximize"></i><span>3800sqft</span></p>
+                    </div>
+                    <a href="./View_property_3.html" class="btn">View Property</a>
+
+            </div>
+        </div>
+
+            <div style="margin-top: 2rem; text-align: center;">
+              <a href="./All_listings.html" class="inline-btn">View All</a>
+            </div>
+        
+    </section>
+
+    <!-- ========== End listing section ========== -->
+
+
+
+   <!-- ========== Start footer section ========== -->
+   
+   <footer class="footer">
+
+    <section class="flex">
+
+        <div class="box">
+            <a href="tel:0123456789"><i class="fas fa-phone"></i><span>0123456789</span></a>
+            <a href="tel:0101234567"><i class="fas fa-phone"></i><span>0101234567</span></a>
+            <a href="mail:visionestate@gmail.com"><i class="fas fa-envelope"></i><span>visionestate@gmail.com</span></a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i><span>Miami, California, USA</span></a>
+        </div>
+
+        <div class="box">
+            <a href="./index.html"><span>Home</span></a>
+            <a href="./About.html"><span>About</span></a>
+            <a href="./Contact_Us.html"><span>Contact Us</span></a>
+            <a href="./All_listings.html"><span>All Listings</span></a>
+            <a href="#"><span>Saved Properties</span></a>
+        </div>
+
+        <div class="box">
+            <a href="www.facebook.com"><span>facebook</span><i class="fab fa-facebook"></i></a>
+            <a href="www.twitter.com"><span>twitter</span><i class="fab fa-twitter"></i></a>
+            <a href="www.linkedin.com"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
+            <a href="www.instagram.com"><span>instagram</span><i class="fab fa-instagram"></i></a>
+        </div>
+
+    </section>
+
+    <div class="credit">&copy; copyright @ 2023 | All Rights Reserved!</div>
+
+   </footer> 
+
+   <!-- ========== End footer section ========== -->    
+
+   <!-- JS file link  -->
+   <script src="./JS/mainJS.js"></script>
+</body>
+</html>
